@@ -7,6 +7,10 @@ The name comes from [Myrrhis odorata](https://en.wikipedia.org/wiki/Cicely),
 or [Saksankirveli](https://fi.wikipedia.org/wiki/Saksankirveli) in Finnish.
 
 
+## The classic "Hello, World!" program
+
+Nothing special.
+
 ## Pipe repeater - prep
 
 Program that connects multiple instances of the given program into a pipeline.
