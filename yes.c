@@ -9,6 +9,11 @@
  * TAIL:
  *   Make sure the compiler does it's tail-call optimisations,
  *   and the reader understands that C ain't C++.
+ *
+ * NOBODY:
+ *   Extension on TAIL, that will never reach the body of main(). This relies on
+ *   a fairly common implementation specified prototype for main() which takes
+ *   additional `char **envp` argument, in order to have access to `argv`.
  */
 
 #if TEE
@@ -40,6 +45,13 @@ int main(int argc, char **argv)
 {
 	return argc < 0 || main(puts(argv[1] ? argv[1] : "y"), argv);
 }
+
+#elif NOBODY
+
+#include <stdio.h>
+
+int main(int, char **y, char **);
+int main(int, char **y, char *[main(puts(y[1] ? y[1] : "y"), y, y)]){}
 
 #else
 
