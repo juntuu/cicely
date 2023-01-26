@@ -1,10 +1,10 @@
 /*
  * All the yes(1) implementation you would ever want.
  *
- * When buiding, define what you'd like to have:
+ * When building, define what you'd like to have:
  *
  * TEE:
- *   Make `tee` swallow it's own tail
+ *   Make `tee` swallow it's own tail.
  *
  * TAIL:
  *   Make sure the compiler does it's tail-call optimisations,
