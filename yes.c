@@ -14,6 +14,10 @@
  *   Extension on TAIL, that will never reach the body of main(). This relies on
  *   a fairly common implementation specified prototype for main() which takes
  *   additional `char **envp` argument, in order to have access to `argv`.
+ *
+ * JAVA:
+ *   Extension on NOBODY, that aspires to become Java when it grows up. However,
+ *   it's a bit shy about making its ambitions public.
  */
 
 #if TEE
@@ -52,6 +56,14 @@ int main(int argc, char **argv)
 
 int main(int, char **y, char **);
 int main(int, char **y, char *[main(puts(y[1] ? y[1] : "y"), y, y)]){}
+
+#elif JAVA
+
+#include <stdio.h>
+
+int main(int, char **y, char **);
+int main(int, char **y, char *[
+static! (void*) main(puts(y[1] ? y[1] : "y"), y, y)]){}
 
 #else
 
